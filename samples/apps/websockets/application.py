@@ -46,14 +46,7 @@ def _get_config_list() -> List[Dict[str, str]]:
     # can use both OpenAI and Azure OpenAI API keys
     config_list = [
         {
-            "model": "gpt-35-turbo-16k",
-            "api_key": os.environ.get("AZURE_OPENAI_API_KEY"),
-            "base_url": os.environ.get("AZURE_OPENAI_BASE_URL"),
-            "api_type": "azure",
-            "api_version": os.environ.get("AZURE_OPENAI_API_VERSION"),
-        },
-        {
-            "model": "gpt-4",
+            "model": "gpt-4o-mini",
             "api_key": os.environ.get("OPENAI_API_KEY"),
         },
     ]

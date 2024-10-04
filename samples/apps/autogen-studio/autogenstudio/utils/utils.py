@@ -474,7 +474,7 @@ def load_code_execution_config(code_execution_type: CodeExecutionConfigTypes, wo
         executor = LocalCommandLineCodeExecutor(work_dir=work_dir)
     elif code_execution_type == CodeExecutionConfigTypes.docker:
         try:
-            executor = DockerCommandLineCodeExecutor(work_dir=work_dir)
+            executor = DockerCommandLineCodeExecutor(work_dir=work_dir, image="verbis-python-da:latest")
         except Exception as e:
             logger.error(f"Error initializing Docker executor: {e}")
             return False

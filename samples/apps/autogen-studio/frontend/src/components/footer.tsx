@@ -18,7 +18,7 @@ const Footer = () => {
   }, []);
   return (
     <div className=" mt-4 text-primary p-3  border-t border-secondary flex ">
-      <div className="text-xs flex-1">
+      {/* <div className="text-xs flex-1">
         Maintained by the AutoGen{" "}
         <a
           target={"_blank"}
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       {version && (
         <div className="text-xs ml-2 text-secondary"> v{version}</div>
-      )}
+      )} */}
     </div>
   );
 };

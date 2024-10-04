@@ -68,7 +68,7 @@ const Header = ({ meta, link }: any) => {
           <div className="  px-0 sm:px-0 lg:px-0 ">
             <div className="flex justify-between h-16">
               <div className="flex  lg:px-0 ">
-                <div className="flex flex-shrink-0 pt-2">
+                {/* <div className="flex flex-shrink-0 pt-2">
                   <a className="block  " href="/#">
                     <span className=" bg-primary  inline-block pt-2 absolute">
                       {" "}
@@ -83,7 +83,7 @@ const Header = ({ meta, link }: any) => {
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> */}
 
                 <div className="hidden md:ml-6 md:flex md:space-x-6">
                   {/* Current: "border-accent text-gray-900", Default: "border-transparent text-secondary hover:border-gray-300 hover:text-primary" */}
@@ -133,14 +133,14 @@ const Header = ({ meta, link }: any) => {
                   {user && (
                     <>
                       <div className="ml-3">
-                        <div className="text-sm text-primary">{userName}</div>
-                        <div className="text-xs  text-secondary">{user_id}</div>
+                        {/* <div className="text-sm text-primary">{userName}</div>
+                        <div className="text-xs  text-secondary">{user_id}</div> */}
                       </div>
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="ml-4 relative flex-shrink-0">
                         <div>
-                          <Menu.Button className="bg-primary rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                          {/* <Menu.Button className="bg-primary rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                             <span className="sr-only">Open user menu</span>
                             {userAvatarUrl && (
                               <img
@@ -154,7 +154,7 @@ const Header = ({ meta, link }: any) => {
                                 {userName[0]}
                               </div>
                             )}
-                          </Menu.Button>
+                          </Menu.Button> */}
                         </div>
                         <Transition
                           as={Fragment}

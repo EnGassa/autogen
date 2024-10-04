@@ -668,7 +668,10 @@ const ChatBox = ({
           </div>
         )}
 
-        <div id="message-list" className="ml-2"> {messageListView}</div>
+        <div id="message-list" className="ml-2">
+          {" "}
+          {messageListView}
+        </div>
         {(loading || awaitingUserInput) && (
           <div id="loading-bar" className={` inline-flex gap-2 duration-300 `}>
             <div className=""></div>
@@ -728,11 +731,16 @@ const ChatBox = ({
         )}
       </div>
       {editable && (
-        <div id="input-area" className="mt-2 p-2 absolute   bg-primary  bottom-0 w-full">
+        <div
+          id="input-area"
+          className="mt-2 p-2 absolute   bg-primary  bottom-0 w-full"
+        >
           <div
             id="input-form"
             className={`rounded p-2 shadow-lg flex mb-1  gap-2 ${
-              loading && !awaitingUserInput ? " opacity-50 pointer-events-none" : ""
+              loading && !awaitingUserInput
+                ? " opacity-50 pointer-events-none"
+                : ""
             }`}
           >
             {/* <input className="flex-1 p-2 ring-2" /> */}
@@ -764,7 +772,10 @@ const ChatBox = ({
                 style={{ width: "45px", height: "35px" }}
                 title="Send message"
                 onClick={() => {
-                  if (textAreaInputRef.current && (awaitingUserInput || !loading)) {
+                  if (
+                    textAreaInputRef.current &&
+                    (awaitingUserInput || !loading)
+                  ) {
                     if (awaitingUserInput) {
                       sendUserResponse(textAreaInputRef.current.value); // Use the new function for user input
                     } else {
@@ -789,7 +800,7 @@ const ChatBox = ({
             </form>
           </div>{" "}
           <div>
-            <div className="mt-2 text-xs text-secondary">
+            {/* <div className="mt-2 text-xs text-secondary">
               <Tooltip title={`Socket ${wsConnectionStatus}`}>
                 <div
                   className={`w-1 h-3 rounded  inline-block mr-1 ${getConnectionColor(
@@ -807,10 +818,13 @@ const ChatBox = ({
               }`}
             >
               {promptButtons}
-            </div>
+            </div> */}
           </div>
           {error && !error.status && (
-            <div id="error-message" className="p-2   rounded mt-4 text-orange-500 text-sm">
+            <div
+              id="error-message"
+              className="p-2   rounded mt-4 text-orange-500 text-sm"
+            >
               {" "}
               <ExclamationTriangleIcon className="h-5 text-orange-500 inline-block mr-2" />{" "}
               {error.message}

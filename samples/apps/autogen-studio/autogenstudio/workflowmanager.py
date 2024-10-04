@@ -621,7 +621,7 @@ class SequentialWorkflowManager:
             "config": {
                 "name": "user_proxy",
                 "human_input_mode": "NEVER",
-                "max_consecutive_auto_reply": 25,
+                "max_consecutive_auto_reply": 50,
                 "code_execution_config": "local",
                 "default_auto_reply": "TERMINATE",
                 "description": "User Proxy Agent Configuration",
@@ -686,7 +686,7 @@ class SequentialWorkflowManager:
             "config": {
                 "name": "user_proxy",
                 "human_input_mode": "NEVER",
-                "max_consecutive_auto_reply": 25,
+                "max_consecutive_auto_reply": 50,
                 "code_execution_config": "local",
                 "default_auto_reply": "TERMINATE",
                 "description": "User Proxy Agent Configuration",

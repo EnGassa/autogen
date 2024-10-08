@@ -703,12 +703,7 @@ const ChatBox = ({
                 <div
                   id="agent-messages"
                   ref={socketDivRef}
-                  style={{
-                    minHeight: "300px",
-                    maxHeight: "400px",
-                    overflowY: "auto",
-                  }}
-                  className={`inline-block scroll group relative   p-2 rounded w-full bg-light `}
+                  className={`inline-block scroll group relative p-2 rounded w-full bg-light`}
                 >
                   <CollapseBox
                     open={true}
@@ -716,13 +711,15 @@ const ChatBox = ({
                       socketMsgs.length > 1 ? "s" : ""
                     }) `}
                   >
-                    {socketMsgs?.map((message: any, i: number) => {
-                      return (
-                        <div key={i}>
-                          <AgentRow message={message} />
-                        </div>
-                      );
-                    })}
+                    <div className="max-h-full overflow-y-auto">
+                      {socketMsgs?.map((message: any, i: number) => {
+                        return (
+                          <div key={i}>
+                            <AgentRow message={message} />
+                          </div>
+                        );
+                      })}
+                    </div>
                   </CollapseBox>
                 </div>
               )}
